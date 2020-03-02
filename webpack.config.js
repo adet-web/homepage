@@ -1,39 +1,38 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
+  entry: "./src/index.js",
 
-entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
 
-output: {
+    filename: "index.js"
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
 
-  path: path.resolve(__dirname, "dist"),
+        loader: "babel-loader",
 
-  filename: "index.js"
-
-},
-
-module: {
-
-  rules: [
-
-  {
-      test:/\.(js|jsx)$/,
-
-      loader: "babel-loader",
-
-      query: {
-
+        query: {
           presets: ["@babel/preset-env", "@babel/preset-react"]
-
+        }
       }
-
-  }
-
-]
-}
-
+    ]
+  },
+  devServer: {
+    contentBase: './dist'
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
+  ]
 };
-
- 
 
 module.exports = config;
