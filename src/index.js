@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import css from './css/styles.scss';
+
 
 export default class Homepage extends Component {
   render() {
@@ -147,3 +149,7 @@ export default class Homepage extends Component {
     );
   }
 }
+ReactDOM.render(
+  <Homepage/>,
+  document.getElementById('app')
+);
