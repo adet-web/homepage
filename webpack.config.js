@@ -2,7 +2,7 @@ const path = require("path");
 
 const config = {
 
-entry: "./index.js",
+entry: "./src/index.js",
 
 output: {
 
@@ -14,7 +14,7 @@ output: {
 
 module: {
 
-  loaders: [
+  rules: [
 
   {
       test:/\.(js|jsx)$/,
@@ -23,7 +23,7 @@ module: {
 
       query: {
 
-          presets: ["react", "es2016"]
+          presets: ["@babel/preset-env", "@babel/preset-react"]
 
       }
 
