@@ -14,7 +14,8 @@
   "dependencies": {
     "node-gyp": "^6.1.0",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "sass-loader": "^8.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",

@@ -8,39 +8,9 @@ $roboto: 'Roboto', Arial, sans-serif;
 // $white: #FFFFFF;
 // #90ACB1: #90ACB1;
 // $light-moss: #E2EAEC;
-
-@mixin mobile() {
-  @media (max-width: 980px) {
-    @content;
-  }
-}
-
-@mixin font($color, $family, $weight, $size, $height, $spacing: 0) {
-  font-family: $family;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
-  letter-spacing: $spacing;
-  color: $color;
-}
-
-@mixin constrain() {
-  @media (min-width: 1305px) {
-    padding-left: calc((100vw - 1265px) / 2);
-    padding-right: calc((100vw - 1265px) / 2);
-  }
-
-  @media (max-width: 1304px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
 .homepage {
   header {
-    @include constrain();
-
-    width: 100vw;
+    width: 100%;
     height: 94px;
     background-color: #000000;
 
@@ -48,22 +18,11 @@ $roboto: 'Roboto', Arial, sans-serif;
     align-items: center;
     justify-content: space-between;
 
-    @include mobile() {
-      align-items: flex-start;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 4;
-    }
 
     .Logo {      
       img {
         width: 90px;
         display: block;
-
-        @include mobile() {
-          width: 60px;
-        }
       }
     }
 
@@ -73,24 +32,17 @@ $roboto: 'Roboto', Arial, sans-serif;
       position: absolute;
       left: 0;
 
-      @include mobile() {
-        bottom: 15px;
-      }
-
       a {
-        @include font(#FFFFFF, $lato, 600, 14px, 14px, 0.7px);
+        font-family: $lato;
+        color: #FFFFFF;
+        font-weight:  600;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.7px;
         text-decoration: none;
 
         &:not(:first-child) {
           margin-left: 1em;
-
-          @include mobile() {
-            margin-left: 2em;
-          }
-        }
-        @include mobile(){
-          font-size: 11px;
-          letter-spacing: 0.55px;
         }
       }
     }
@@ -106,10 +58,6 @@ $roboto: 'Roboto', Arial, sans-serif;
 
     position: relative;
 
-    @include mobile() {
-      height: auto;
-      margin-bottom: 100px;
-    }
 
     &:before {
       background-color: rgba(#000000, 0.7);
@@ -119,9 +67,6 @@ $roboto: 'Roboto', Arial, sans-serif;
       top: 0;
       left: 0;
       content: '';
-      @include mobile(){
-        opacity: 1;
-      }
     }
 
     .content {
@@ -135,21 +80,17 @@ $roboto: 'Roboto', Arial, sans-serif;
       position: relative;
       z-index: 3;
 
-      @include mobile() {
-        padding-bottom: 20px;
-      }
 
       .eyebrow {
         background: #90ACB1 0% 0% no-repeat padding-box; 
         padding: 6px 15px;
-
-        @include font(#ffffff, $lato, 600, 12px, 12px, 0.6px);
-        @include mobile(){
-          padding: 0px 14px;
-          font-size: 10px;
-          line-height: 20px;
-          letter-spacing: 0.5px;
-        }
+        font-family: $lato;
+        color: #FFFFFF;
+        font-weight:  600;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.6px;
+        text-decoration: none;
       }
 
       h1 {
@@ -157,17 +98,13 @@ $roboto: 'Roboto', Arial, sans-serif;
         text-align: center;
         padding: 45px 0 10px 0;
         br{ display: none;}
-        @include font(#FFFFFF, $lato, 700, 105px, 100px, -2.63px);
-
-        @include mobile() {
-          br{ display: initial;}
-          margin-bottom: 5px;
-          font-size: 39px;
-          line-height: 38px;
-          letter-spacing: -0.97px;
-          padding-top: 10px;
-          padding-bottom: 0px;
-        }
+        font-family: $lato;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 105px;
+        line-height: 100px;
+        letter-spacing: -2.63px;
+        text-decoration: none;
       }
 
       h2 {
@@ -177,16 +114,13 @@ $roboto: 'Roboto', Arial, sans-serif;
         border: #E2EAEC 2px solid;
         padding: 10px 18px;
         br{ display: none;}
-        @include font(#FFFFFF, $lato, 500, 20px, 20px, 1px);
-
-        @include mobile() {
-          br{display: initial;}
-          padding-top: 0px;
-          border: none;
-          letter-spacing: 0.6px;
-          font-size: 12px;
-          line-height: 18px;
-        }
+        font-family: $lato;
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        text-decoration: none;
       }
 
       .notice {
@@ -197,41 +131,36 @@ $roboto: 'Roboto', Arial, sans-serif;
         padding: 15px 30px;
         position: absolute;
         bottom: -111px;
-        @include mobile(){
-          line-height: 14px;
-          padding: 4px 10px;
-          bottom: -58px;
-        }
 
         .line1 {
-          @include font(#2D3535, $lato, 900, 48px, 48px, 1px);
+          font-family: $lato;
+          color: #2D3535;
+          font-weight: 900;
+          font-size: 48px;
+          line-height: 48px;
+          letter-spacing: 1px;
+          text-decoration: none;
           margin-bottom: 6px;
-          @include mobile(){
-            font-size: 30px;
-            line-height: 14px;
-            padding-top: 8px;
-          }
         }
 
         .line2 {
-          @include font(#2D3535, $roboto, 400, 16px, 22px, 1.6px);
-          @include mobile(){
-            margin-bottom: -3px;
-            font-size: 11px;
-            line-height: 14px;
-            letter-spacing: 0.55px;
-          }
+          font-family: $roboto;
+          color: #2D3535;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 1.6px;
         }
 
         .line3 {
           a {
-            @include font(#2D3535, $roboto, 700, 16px, 22px, 1.6px);
+            font-family: $roboto;
+            color: #2D3535;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 1.6px;
             text-decoration: underline;
-            @include mobile(){
-              font-size: 11px;
-              letter-spacing: 0.55px;
-              line-height: 14px;
-            }
           }
         }
       }
@@ -245,10 +174,6 @@ $roboto: 'Roboto', Arial, sans-serif;
       height: 100%;
       overflow: hidden;
       z-index: 2;
-
-      @include mobile() {
-        display: none;
-      }
 
       img {
         margin: 0;
@@ -268,9 +193,6 @@ $roboto: 'Roboto', Arial, sans-serif;
       overflow: hidden;
       z-index: 2;
 
-      @include mobile() {
-        display: none;
-      }
 
       img {
         margin: 0;
@@ -293,19 +215,9 @@ $roboto: 'Roboto', Arial, sans-serif;
     align-items: center;
     justify-content: space-between;
 
-    @include mobile() {
-      flex-direction: column;
-      height: auto;
-      max-height: none;
-    }
 
     &.why {
       position: relative;
-      @include mobile() {
-        flex-direction: column;
-        height: auto;
-        max-height: none;
-      }
 
       .colL {
         height: 100%;
@@ -315,11 +227,6 @@ $roboto: 'Roboto', Arial, sans-serif;
         align-items: center;
         justify-content: flex-start;
 
-        @include mobile() {
-          height: auto;
-          order: 2;
-        }
-
         .glitter {
           width: 200px;
           height: 100%;
@@ -327,9 +234,6 @@ $roboto: 'Roboto', Arial, sans-serif;
           left: 0;
           top: 0;
 
-          @include mobile() {
-            display: none;
-          }
 
           img {
             width: 100%;
@@ -346,38 +250,24 @@ $roboto: 'Roboto', Arial, sans-serif;
           padding-left: 150px;
           padding-right: 68px;
 
-          @include mobile() {
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px;
-            padding-top: 5px;
-          }
-
           .hed {
-            @include font(#2D3535, $lato, 700, 47px, 48px);
+            font-family: $lato;
+            color: #2D3535;
+            font-weight: 700;
+            font-size: 47px;
+            line-height: 48px;
             max-width: 400px;
-
-            @include mobile() {
-              font-size: 20px;
-              line-height: 25px;
-              margin-left: 14px;
-              margin-right: 14px;
-              max-width: none;
-            }
           }
 
           .dek {
-            @include font(#2D3535, $roboto, 300, 20px, 23px);
+            font-family: $roboto;
+            color: #2D3535;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 23px;
             margin: 15px 0 40px 0;
             max-width: 500px;
-            @include mobile(){
-              font-size: 13px;
-              line-height: 18px;
-              margin-left: 14px; 
-              margin-right: 14px;
-              margin-top: 10px;
-              margin-bottom: 20px; 
-            }
+      
           }
 
           .button {
@@ -389,17 +279,14 @@ $roboto: 'Roboto', Arial, sans-serif;
             justify-content: center;
             align-items: center;
 
-            @include font(#FFFFFF, $lato, 700, 25px, 25px, 1.25px);
+            font-family: $lato;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 25px;
+            letter-spacing: 1.25px;
             text-transform: uppercase;
             position: relative;
-
-            @include mobile(){
-              margin-left: 14px;
-              width: 107px;
-              height: 25px;
-              font-size: 12px;
-              line-height: 50px;
-            }
 
             a {
               width: 100%;
@@ -420,27 +307,11 @@ $roboto: 'Roboto', Arial, sans-serif;
         width: auto;
         max-width: 607px;
 
-        @include mobile() {
-          height: auto;
-          width: 100vw;
-          max-width: none;
-          order: 1;
-        }
-
         img {
           height: 100%;
           width: auto;
           margin: 0;
           display: block;
-
-          @include mobile() {
-            filter: brightness(0.5);
-            margin-left: auto;
-            margin-right: auto;
-            width: 83vw;
-            height: 37vw;
-            padding-top: 20px;
-          }
         }
       }
     }
@@ -453,11 +324,6 @@ $roboto: 'Roboto', Arial, sans-serif;
         width: auto;
         max-width: 607px;
 
-        @include mobile() {
-          height: auto;
-          width: 100vw;
-          max-width: none;
-        }
 
         img {
           height: 100%;
@@ -465,13 +331,6 @@ $roboto: 'Roboto', Arial, sans-serif;
           margin: 0;
           display: block;
 
-          @include mobile() {
-            margin-left: auto;
-            margin-right: auto;
-            width: 83vw;
-            height: 37vw;
-            padding-top: 20px;
-          }
         }
       }
 
@@ -483,10 +342,6 @@ $roboto: 'Roboto', Arial, sans-serif;
         align-items: center;
         justify-content: flex-start;
 
-        @include mobile() {
-          height: auto;
-        }
-
         .glitter {
           width: 200px;
           height: 100%;
@@ -494,10 +349,6 @@ $roboto: 'Roboto', Arial, sans-serif;
           right: 0;
           top: 0;
           transform: rotate(180deg);
-
-          @include mobile() {
-            display: none;
-          }
 
           img {
             width: 100%;
@@ -512,44 +363,24 @@ $roboto: 'Roboto', Arial, sans-serif;
           width: 100%;
           padding-left: 80px;
 
-          @include mobile() {
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px;
-            padding-top: 5px;
-          }
-
           .hed {
-            @include font(#2D3535, $lato, 700, 47px, 48px);
+            font-family: $lato;
+            color: #2D3535;
+            font-weight: 700;
+            font-size: 47px;
+            line-height: 48px;
             max-width: 550px;
             br{display: none;}
-
-            @include mobile() {
-              br{ display: initial;}
-              font-size: 20px;
-              line-height: 25px;
-              max-width: none;
-              margin-left: 14px;
-              margin-right: 14px;
-            }
           }
 
           .dek {
-            @include font(#2D3535, $roboto, 300, 20px, 23px);
+            font-family: $roboto;
+            color: #2D3535;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 23px;
             margin: 15px 0 40px 0;
             max-width: 530px;
-            @include mobile(){
-              margin-top: 0px;
-              margin-bottom: 15px;
-            }
-            p{
-              @include mobile(){
-                font-size: 13px;
-                line-height: 18px;
-                margin-left: 14px;
-                margin-right: 14px;
-              }
-            }
           }
 
           .button {
@@ -561,18 +392,15 @@ $roboto: 'Roboto', Arial, sans-serif;
             justify-content: center;
             align-items: center;
 
-            @include font(#FFFFFF, $lato, 700, 25px, 25px, 1.25px);
+            font-family: $lato;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 25px;
+            letter-spacing: 1.25px;
             text-transform: uppercase;
 
             position: relative;
-
-            @include mobile(){
-              margin-left: 14px;
-              width: 107px;
-              height: 25px;
-              font-size: 12px;
-              line-height: 50px;
-            }
 
             a {
               width: 100%;
@@ -595,35 +423,28 @@ $roboto: 'Roboto', Arial, sans-serif;
     padding-top: 100px;
     padding-bottom: 120px;
     text-align: center;
-    
-    @include font(#030303, $lato, 300, 65px, 65px, 0.65px);
-    @include constrain();
+  
+    font-family: $lato;
+    color: #030303;
+    font-weight: 300;
+    font-size: 65px;
+    line-height: 65px;
+    letter-spacing: 0.65px;
 
-    @include mobile() {
-      font-weight: 300;
-      font-size: 25px;
-      line-height: 29px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
   }
 
   .columnsRow {
-    @include constrain();
     margin: 120px 0 80px 0;
 
-    @include mobile() {
-      margin-top: 50px;
-      margin-bottom: 37px;
-    }
+    
 
     .header {
-      @include font(#2D3535, $lato, 700, 47px, 49px);
+      font-family: $lato;
+      color: #2D3535;
+      font-weight: 700;
+      font-size: 47px;
+      line-height: 49px;
       text-align: center;
-      @include mobile(){
-        font-size: 20px;
-        line-height: 22px;
-      }
     }
 
     .columns {
@@ -633,24 +454,12 @@ $roboto: 'Roboto', Arial, sans-serif;
 
       margin: 32px 0 0 0;
 
-      @include mobile() {
-        display: block;
-        margin-top: 15px;
-      }
 
       .column {
         width: 22.5%;
-        @media (max-width: 320px){ padding-top: 10px;}
-        @media (min-width: 410px){ margin-left: 20px; .mobile{ margin-right: 35px;}}
-        @include mobile() {
-          width: 100%;
-          margin-bottom: 0px;
-          display: flex;
-        }
+        
         .mobile{
-          @include mobile(){
-            padding-left: 15px;
-          }
+          padding-left: 0px;
         }
         .image {
           width: 100%;
@@ -658,29 +467,25 @@ $roboto: 'Roboto', Arial, sans-serif;
           img {
             width: 100%;
             margin: 0 0 5px 0;
-            @include mobile(){
-              width: 41vw;
-              height: 39vw;
-              margin-bottom: 10px;
-            }
           }
         }
 
         .hed {
-          @include font(#000000, $lato, 700, 20px, 22px, 0.2px);
+          font-family: $lato;
+          color: #000000;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 22px;
           text-transform: uppercase;
-          @include mobile(){
-            font-size: 12px;
-            line-height: 16px;
-          }
+          letter-spacing: 0.2px;
         }
 
         .dek {
-          @include font(#000000, $roboto, 300, 18px, 22px);
-          @include mobile(){
-            font-size: 11px;
-            line-height: 16px;
-          }
+          font-family: $roboto;
+          color: #000000;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 22px;
         }
       }
     }
@@ -688,21 +493,16 @@ $roboto: 'Roboto', Arial, sans-serif;
 
   footer {
     text-align: center;
-
-    @include mobile(){
-      display: block !important;
-      margin-bottom: 20px;
-    }
     
     .hed {
-      @include font(#2D3535, $lato, 900, 25px, 35px, 1.25px);
+      font-family: $lato;
+      color: #000000;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 35px;
+      letter-spacing: 1.25px;
+
       br{ display: none;}
-      @include mobile(){
-        br{ display: initial;}
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 14px;
-      }
     }
 
     .arrow {
@@ -712,11 +512,6 @@ $roboto: 'Roboto', Arial, sans-serif;
       border-right: 8px solid transparent;
       border-top: 15px solid #90ACB1;
       margin: 8px auto 14px;
-      @include mobile(){
-        border-top: 8px solid #90ACB1;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-      }
     }
 
     .button {
@@ -730,16 +525,16 @@ $roboto: 'Roboto', Arial, sans-serif;
       align-items: center;
 
       @include font(#FFFFFF, $lato, 700, 25px, 25px, 1.25px);
+      font-family: $lato;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 25px;
+      letter-spacing: 1.25px;
+
       text-transform: uppercase;
 
       position: relative;
-      
-      @include mobile(){
-        width: 107px;
-        height: 25px;
-        font-size: 12px;
-        line-height: 50px;
-      }
 
       a {
         width: 100%;

@@ -35,7 +35,7 @@ export default class Homepage extends Component {
               <div className={`${css.line1}`}>20% Off</div>
               <div className={`${css.line2}`}>Limited time offer</div>
               <div className={`${css.line3}`}>
-                <a href="https://catalog.mindedge.com/inc/categories/74">Learn more</a>
+                <p>Learn more</p>
               </div>
             </div>
           </div>
