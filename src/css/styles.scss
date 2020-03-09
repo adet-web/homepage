@@ -2,12 +2,7 @@ $centra: 'CentraNo1', 'Arial', sans-serif;
 $lato: 'Lato', 'Arial', sans-serif;  
 $roboto: 'Roboto', Arial, sans-serif;
 
-// $black: #000000;
-// $dark-gray: #2D3535;
-// #030303: #030303;
-// $white: #FFFFFF;
-// #90ACB1: #90ACB1;
-// $light-moss: #E2EAEC;
+
 .homepage {
   header {
     width: 100%;
@@ -17,8 +12,6 @@ $roboto: 'Roboto', Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
     .Logo {      
       img {
         width: 90px;
