@@ -1,8 +1,8 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  entry: "./src/index.js",
+  entry: ["./src/index.js", "./src/css/styles.scss"],
 
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -10,7 +10,7 @@ const config = {
     filename: "index.js"
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ["*", ".js", ".jsx"]
   },
   module: {
     rules: [
@@ -22,15 +22,23 @@ const config = {
         query: {
           presets: ["@babel/preset-env", "@babel/preset-react"]
         }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader", // CSS objects support in JS
+          "css-loader", // CSS -> CommonJS
+          "sass-loader" // Sass -> CSS
+        ]
       }
     ]
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: "./dist"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: "./src/index.html"
     })
   ]
 };
