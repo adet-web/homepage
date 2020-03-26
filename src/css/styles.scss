@@ -517,7 +517,6 @@ $roboto: 'Roboto', Arial, sans-serif;
       justify-content: center;
       align-items: center;
 
-      @include font(#FFFFFF, $lato, 700, 25px, 25px, 1.25px);
       font-family: $lato;
       color: #FFFFFF;
       font-weight: 700;
