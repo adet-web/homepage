@@ -6,10 +6,10 @@ import css from './css/styles.scss';
 export default class Homepage extends Component {
   render() {
     return (
-      <div className={`${css.homepage}`}>
+      <div class = 'homepage'>
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'></link>
         <header>
-          <div className={`${css.Logo}`}>
+          <div class = 'Logo'>
             <p> Insert Logo Here</p>
           </div>
 
@@ -20,21 +20,21 @@ export default class Homepage extends Component {
             <p>Contact</p>
           </nav>
 
-          <div className={`${css.background}`}>
+          <div class = 'background'>
             <p>Insert Background here</p>
           </div>
         </header>
 
-        <section className={`${css.intro}`}>
-          <div className={`${css.content}`}>
-            <div className={`${css.eyebrow}`}>Welcome to A.D.E.T !</div>
+        <section class = 'intro'>
+          <div class = 'content'>
+            <div class = 'eyebrow'>Welcome to A.D.E.T !</div>
             <h1> Why choose A.D.E.T?</h1>
             <h2> No idea what to put here</h2>
 
-            <div className={`${css.notice}`}>
-              <div className={`${css.line1}`}>20% Off</div>
-              <div className={`${css.line2}`}>Limited time offer</div>
-              <div className={`${css.line3}`}>
+            <div class = 'notice'>
+              <div class = 'line1'>20% Off</div>
+              <div class = 'line2'>Limited time offer</div>
+              <div class = 'line3'>
                 <p>Learn more</p>
               </div>
             </div>
@@ -42,50 +42,50 @@ export default class Homepage extends Component {
 
         </section>
 
-        <section className={`${css.contentRow} ${css.why}`}>
-          <div className={`${css.colL}`}>
-            <div className={`${css.glitter}`}>
+        <section class = 'contentRow} ${css.why'>
+          <div class = 'colL'>
+            <div class = 'glitter'>
             </div>
 
-            <div className={`${css.content}`}>
-              <div className={`${css.hed}`}>
+            <div class = 'content'>
+              <div class = 'hed'>
               </div>
 
-              <div className={`${css.dek}`}>
+              <div class = 'dek'>
                 
               </div>
 
-              <div className={`${css.button}`}>
+              <div class = 'button'>
                 Learn more
               </div>
             </div>
           </div>
 
-          <div className={`${css.colR}`}>
+          <div class = 'colR'>
           </div>
         </section>
 
-        <section className={`${css.quote}`}>
+        <section class = 'quote'>
         </section>
 
-        <section className={`${css.contentRow} ${css.start}`}>  
-          <div className={`${css.colL}`}>
+        <section class = 'contentRow} ${css.start'>  
+          <div class = 'colL'>
           </div>
 
-          <div className={`${css.colR}`}>
-            <div className={`${css.glitter}`}>
+          <div class = 'colR'>
+            <div class = 'glitter'>
             </div>
 
-            <div className={`${css.content}`}>
-              <div className={`${css.hed}`}>
+            <div class = 'content'>
+              <div class = 'hed'>
               </div>
 
-              <div className={`${css.dek}`}>
+              <div class = 'dek'>
                 
               
               </div>
 
-              <div className={`${css.button}`}>
+              <div class = 'button'>
                 Learn more
               
               </div>
@@ -93,44 +93,44 @@ export default class Homepage extends Component {
           </div>
         </section>
 
-        <section className={`${css.columnsRow}`}>
-          <div className={`${css.header}`}>Certificate Courses Include</div>
+        <section class = 'columnsRow'>
+          <div class = 'header'>Certificate Courses Include</div>
           
-          <div className={`${css.columns}`}>
-            <div className={`${css.column}`}>
-              <div className={`${css.image}`}></div>
-              <div className={`${css.mobile}`}>
-                <div className={`${css.hed}`}></div>
-                <div className={`${css.dek}`}>      
+          <div class = 'columns'>
+            <div class = 'column'>
+              <div class = 'image'></div>
+              <div class = 'mobile'>
+                <div class = 'hed'></div>
+                <div class = 'dek'>      
                 </div>
               </div>  
             </div>
 
-            <div className={`${css.column}`}>
-              <div className={`${css.image}`}></div>
-              <div className={`${css.mobile}`}>  
-                <div className={`${css.hed}`}></div>
-                <div className={`${css.dek}`}>
+            <div class = 'column'>
+              <div class = 'image'></div>
+              <div class = 'mobile'>  
+                <div class = 'hed'></div>
+                <div class = 'dek'>
                  
                 </div>
               </div>  
             </div>
 
-            <div className={`${css.column}`}>
-              <div className={`${css.image}`}></div>
-              <div className={`${css.mobile}`}>  
-                <div className={`${css.hed}`}>Finance 101 for entrepreneurs</div>
-                <div className={`${css.dek}`}>
+            <div class = 'column'>
+              <div class = 'image'></div>
+              <div class = 'mobile'>  
+                <div class = 'hed'>Finance 101 for entrepreneurs</div>
+                <div class = 'dek'>
                   
                 </div>
               </div>  
             </div>
 
-            <div className={`${css.column}`}>
-              <div className={`${css.image}`}></div>
-               <div className={`${css.mobile}`}> 
-                <div className={`${css.hed}`}></div>
-                <div className={`${css.dek}`}>
+            <div class = 'column'>
+              <div class = 'image'></div>
+               <div class = 'mobile'> 
+                <div class = 'hed'></div>
+                <div class = 'dek'>
                   
                 </div>
                </div>
@@ -139,9 +139,9 @@ export default class Homepage extends Component {
         </section>
 
         <footer>
-          <div className={`${css.hed}`}></div>
-          <div className={`${css.arrow}`}></div>
-          <div className={`${css.button}`}>
+          <div class = 'hed'></div>
+          <div class = 'arrow'></div>
+          <div class = 'button'>
             LEARN MORE
           </div>
         </footer>
