@@ -7,10 +7,10 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
 
-    filename: "index.js",
+    filename: "index.js"
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx", ".scss"],
+    extensions: ["*", ".js", ".jsx"]
   },
   module: {
     rules: [
@@ -20,37 +20,36 @@ const config = {
         loader: "babel-loader",
 
         query: {
-          presets: ["@babel/preset-env", "@babel/preset-react"],
-        },
+          presets: ["@babel/preset-env", "@babel/preset-react"]
+        }
       },
       {
         test: /\.s[ac]ss$/i,
-        loader: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-            },
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
+        use: [
+          "style-loader", // CSS objects support in JS
+          "css-loader", // CSS -> CommonJS
+          "sass-loader" // Sass -> CSS
+        ]
       },
-    ],
+      {
+        test: /\.(gif|jpe?g|png|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          },
+        },
+      }
+    ]
   },
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./dist"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-  ],
+      template: "./src/index.html"
+    })
+  ]
 };
 
 module.exports = config;
