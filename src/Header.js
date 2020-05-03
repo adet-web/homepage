@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import logo from './img/adet_logo.png';
+import Login_Form from './login_register';
 
 export default class Header extends Component {
     render() {
@@ -13,13 +14,12 @@ export default class Header extends Component {
                             <a href="about.html"> About</a>
                             <a href="#"> Insights</a>
                             <a href="#"> Investor Relations</a>
-                            <input type="button" onclick= "" value="form">Login</input>
+                            <input type="button" onClick= "<Login_Form/>" value="form">Login</input>
                             <a href="contact.html"> Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <script src="/login_register.js"></script>
         </header>
         );
     }
