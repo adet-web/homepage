@@ -14,12 +14,17 @@ export default class Header extends Component {
                             <a href="about.html"> About</a>
                             <a href="#"> Insights</a>
                             <a href="#"> Investor Relations</a>
-                            <input type="button" onClick= "<Login_Form/>" value="form">Login</input>
+                            <input type="button" onClick= "hello()" value="form">Login</input>
                             <a href="contact.html"> Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
+            <script> 
+                function hello(){
+                    console.log("hello")
+                }
+            </script>
         </header>
         );
     }
