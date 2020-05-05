@@ -46,6 +46,7 @@ export default class LoginForm extends Component {
               placeholder="Enter Email"
               name="email"
               required
+              maxlength="255"
             ></input>
           </label>
           <label>
@@ -54,6 +55,7 @@ export default class LoginForm extends Component {
               type="password"
               placeholder="Enter Password"
               name="password"
+              maxlength="255"
               required
             ></input>
           </label>

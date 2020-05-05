@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./img/adet_logo.png";
 import { Link } from "react-router-dom";
-
+import AppContext from "./index"
 export default class Header extends Component {
   render() {
     return (
@@ -22,7 +22,6 @@ export default class Header extends Component {
                   <Link to="/insights">Insights</Link>
                   <Link to="/relations">Investor Relations</Link>
                   <Link to="/login" className="login">
-                    Login
                   </Link>
                   <Link to="/register">Register</Link>
                   <Link to="/contact">Contact</Link>

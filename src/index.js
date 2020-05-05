@@ -18,7 +18,11 @@ const AppContext = React.createContext({
 export default class App extends Component {
   render() {
     return (
-      <AppContext.Provider>
+      <AppContext.Provider  value={{
+        loggedIn: false,
+        email: "",
+        name: ""
+      }}>
         <Header />
         <img
           className="coding-image"
@@ -53,9 +57,10 @@ export default class App extends Component {
           </Route> */}
         </Switch>
 
-          <Footer />
-      <AppContext.Provider />
+        <Footer />
+      </ AppContext.Provider >
     );
+}
 }
 ReactDOM.render(
   <Router>
