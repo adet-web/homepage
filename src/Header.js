@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import logo from "./img/adet_logo.png";
-import Login_Form from "./login_register";
-
 import { Link } from "react-router-dom";
 
 export default class Header extends Component {
