@@ -5,6 +5,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
 import LoginForm from "./Login";
+import RegisterForm from "./Register";
+
 import CodingImage from "./img/coding-image-new.png";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -27,6 +29,9 @@ export default class App extends Component {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route path="/register">
+            <RegisterForm />
+          </Route>
           {/* <Route path="/about">
             <About />
             </Route>
@@ -37,9 +42,7 @@ export default class App extends Component {
             <Relations />
             </Route>
             
-            <Route path="/register">
-            <Register />
-            </Route>
+
             <Route path="/contact">
             <Contact />
           </Route> */}

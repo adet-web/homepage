@@ -21,7 +21,10 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), unique=True)
     password = db.Column(db.String(255))
-    role_id = db.Column(db.Integer)
+    role_id = db.Column(db.Integer, default = 1)
+    name = db.Column(db.String(255))
+    address = db.Column(db.String(255))
+    manager_id = db.Column(db.String(255), default=None)
 
 # Roles, user = 1, manager = 2
 
@@ -45,17 +48,22 @@ def login():
 def register():
     email = request.form["email"]
     password = request.form["password"]
-    
+    name = request.form["name"]
+    address = request.form["address"]
+
     # Check if user already exists
     query = db.session.query(User).filter_by(email=email)
     user_exists = db.session.query(query.exists()).scalar()
     if user_exists:
-        return "User already exists"
+        print("/api/register - user already exists")
+        return jsonify({"registerSuccess": False})
     else:
-        new_user = User(email=email, password=password)
+        new_user = User(email=email, password=password, name=name, address=address)
         db.session.add(new_user)
         db.session.commit()
-        return "Success"
+        session['email'] = email
+        return jsonify({"registerSuccess": True})
+        
 if __name__ == "__main__":
     db.create_all()
     app.run()
