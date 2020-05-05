@@ -12,7 +12,6 @@ export default class LoginForm extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    const XHR = new XMLHttpRequest();
     const form = event.target;
     const data = new FormData(form);
     console.log("Logging in...");
