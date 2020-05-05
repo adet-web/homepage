@@ -127,6 +127,55 @@ header::after{
   color: white;
 }
 
+.nav-unit button:hover{
+  color: #ffffff;
+}
+.nav-unit button:hover::before{
+    width: 100%
+}
+
+.nav-unit button::before{
+  content:'';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+  top: 0;
+  width: 0%
+}
+.nav-unit button{
+  font-size: inherit;
+  font-family: 'Times New Roman', Times, serif;
+  background: black;
+  border: none;
+  text-transform: uppercase;
+  padding-top: 48px;
+  margin-left: 75px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login_form{
+  display: none;
+}
+
+.login:focus + .login_form{
+  display: block;
+  color: white;
+}
+
+.login_form{
+  position: fixed;
+  top: 50px;
+  right: 120px;
+}
+
+.login-container{
+  position: fixed;
+  top: 50px;
+  right: 120px;
+}
 
 
 footer{
