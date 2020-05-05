@@ -5,22 +5,22 @@ export default class Login extends Component {
     return (
         <form className="login_form">
           <div className="login-container">
-            <label for="uname">
-              <b>Username</b>
+            <label for="email">
+              <b>Email</b>
             </label>
             <input
               type="text"
-              placeholder="Enter Username"
-              name="uname"
+              placeholder="Enter Email"
+              name="email"
               required
             ></input>
-            <label for="psw">
+            <label for="password">
               <b>Password</b>
             </label>
             <input
               type="password"
               placeholder="Enter Password"
-              name="psw"
+              name="password"
               required
             ></input>
             <button type="submit">Login</button>
