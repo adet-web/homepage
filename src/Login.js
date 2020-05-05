@@ -1,31 +1,48 @@
 import React, { Component } from "react";
 
 export default class LoginForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleInputChange = this.handleInputChange.bind(this);
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    const XHR = new XMLHttpRequest();
+    const form = event.target
+    const data = new FormData(form)
+
+    
+  }
   render() {
     return (
-        <form className="login_form">
-          <div className="login-container">
-            <label for="email">
-              <b>Email</b>
-            </label>
+      <form className="login_form" onSubmit={this.handleSubmit}>
+        <div className="login-container">
+          <label>
+            <b>Email</b>
             <input
-              type="text"
+              type="email"
               placeholder="Enter Email"
               name="email"
               required
             ></input>
-            <label for="password">
-              <b>Password</b>
-            </label>
+          </label>
+          <label>
+            <b>Password</b>
             <input
               type="password"
               placeholder="Enter Password"
               name="password"
               required
             ></input>
-            <button type="submit">Login</button>
-          </div>
-        </form>
+          </label>
+          <button type="submit">Login</button>
+        </div>
+      </form>
     );
   }
 }
