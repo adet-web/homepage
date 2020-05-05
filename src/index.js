@@ -4,17 +4,14 @@ import css from "./css/styles.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
+import Login from "./Login";
 import CodingImage from "./img/coding-image-new.png";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default class App extends Component {
   render() {
     return (
-      <div className="app">
+      <div>
         <div className="header">
           <Header />
         </div>
@@ -25,12 +22,14 @@ export default class App extends Component {
           width="100%"
           height="250vw"
         />
-        <Router>
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-            {/* <Route path="/about">
+        <Switch>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          {/* <Route path="/about">
             <About />
             </Route>
             <Route path="/insights">
@@ -39,17 +38,14 @@ export default class App extends Component {
             <Route path="/relations">
             <Relations />
             </Route>
-            <Route path="/login" className="login">
-            <Login />
-            </Route>
+            
             <Route path="/register">
             <Register />
             </Route>
             <Route path="/contact">
             <Contact />
           </Route> */}
-          </Switch>
-        </Router>
+        </Switch>
 
         <div className="footer">
           <Footer />
@@ -58,4 +54,9 @@ export default class App extends Component {
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("app")
+);
