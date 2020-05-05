@@ -118,14 +118,14 @@ header::after{
   text-decoration: none;
 }
 
-.login_form{
-  display: none;
-}
+// .login_form{
+//   display: none;
+// }
 
-.login:hover + .login_form{
-  display: block;
-  color: white;
-}
+// .login:hover + .login_form{
+//   display: block;
+//   color: white;
+// }
 
 .nav-unit button:hover{
   color: #ffffff;
@@ -156,26 +156,26 @@ header::after{
   text-decoration: none;
 }
 
-.login_form{
-  display: none;
-}
+// .login_form{
+//   display: none;
+// }
 
-.login:focus + .login_form{
-  display: block;
-  color: white;
-}
+// .login:focus + .login_form{
+//   display: block;
+//   color: white;
+// }
 
-.login_form{
-  position: fixed;
-  top: 50px;
-  right: 120px;
-}
+// .login_form{
+//   position: fixed;
+//   top: 50px;
+//   right: 120px;
+// }
 
-.login-container{
-  position: fixed;
-  top: 50px;
-  right: 120px;
-}
+// .login-container{
+//   position: fixed;
+//   top: 50px;
+//   right: 120px;
+// }
 
 
 footer{
