@@ -45,9 +45,7 @@ export default class App extends Component {
           </Route> */}
         </Switch>
 
-        <div className="footer">
           <Footer />
-        </div>
       </div>
     );
   }
