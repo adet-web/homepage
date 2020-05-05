@@ -9,11 +9,16 @@ import RegisterForm from "./Register";
 
 import CodingImage from "./img/coding-image-new.png";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+const AppContext = React.createContext({
+  loggedIn: false,
+  email: "",
+  name: ""
+})
 
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <AppContext.Provider>
         <Header />
         <img
           className="coding-image"
@@ -49,9 +54,8 @@ export default class App extends Component {
         </Switch>
 
           <Footer />
-      </div>
+      <AppContext.Provider />
     );
-  }
 }
 ReactDOM.render(
   <Router>
