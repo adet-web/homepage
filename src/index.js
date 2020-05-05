@@ -4,7 +4,7 @@ import css from "./css/styles.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
-import Login from "./Login";
+import LoginForm from "./Login";
 import CodingImage from "./img/coding-image-new.png";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export default class App extends Component {
         />
         <Switch>
           <Route exact path="/login">
-            <Login />
+            <LoginForm />
           </Route>
           <Route exact path="/">
             <Home />
