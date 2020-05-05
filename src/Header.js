@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default class Header extends Component {
   render() {
     return (
-      <header>
+      <header className="header">
         <div className="nav-unit">
           <img
             className="logo"

@@ -12,9 +12,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div className="header">
-          <Header />
-        </div>
+        <Header />
         <img
           className="coding-image"
           src={CodingImage}
