@@ -13,10 +13,28 @@ export default class LoginForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const XHR = new XMLHttpRequest();
-    const form = event.target
-    const data = new FormData(form)
-
-    
+    const form = event.target;
+    const data = new FormData(form);
+    console.log("Logging in...");
+    fetch("/api/login", {
+      method: "POST",
+      body: data,
+    }).then((res) => 
+       res.json()
+    ).then(data => {
+      console.log(data)
+      if (data.loginSuccess) {
+        // logged in
+        alert("Login successful")
+      }
+      else {
+        // failure
+        alert("Login failed")
+      }
+    })
+  .catch(err => {
+      console.error(err)
+    })
   }
   render() {
     return (
