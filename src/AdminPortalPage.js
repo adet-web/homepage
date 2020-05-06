@@ -1,11 +1,11 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 const AdminPortalPage = () => {
   return (
     <Fragment>
-      <div class="clients">
+      <div className="clients">
         <h1>Client List</h1>
-        <ul class="client-list">
+        <ul className="client-list">
           <li>
             <div>
               <p>Client: &nbsp; &nbsp; &nbsp; John Doe</p>
@@ -19,13 +19,13 @@ const AdminPortalPage = () => {
             </div>
           </li>
         </ul>
-        <div class="add-client">
+        <div className="add-client">
           <h1>Add New Client</h1>
           <p>
             Enter in the clients email address you wish to add then submit your
             request. Your request will be reviewed in shortly.
           </p>
-          <form class="add-client-form">
+          <form className="add-client-form">
             <input
               type="text"
               id="ticker"
@@ -38,9 +38,9 @@ const AdminPortalPage = () => {
         </div>
       </div>
 
-      <div class="analyze-stocks">
+      <div className="analyze-stocks">
         <h1>Analyze Stocks</h1>
-        <div class="stocks">
+        <div className="stocks">
           <div>
             <p>JPMorgan Chase & Co.</p>
             <a> Expected Closing Price Graph </a>
@@ -79,28 +79,29 @@ const AdminPortalPage = () => {
           </div>
         </div>
       </div>
-      <div class="contact-us">
+      <div className="contact-us">
         <h1>Having Issues?</h1>
         <h2>Here is how to contact us</h2>
         <p>Name: Bryan Cuellar</p>
         <p>Email Address: Bryan Cuellar</p>
         <p>Phone Number: (916) 698-1280</p>
         <h2>Or you can use the form below</h2>
-        <form class="contact-us-form">
-          <label for="email"> What's your email address? </label>
-          <br />
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Enter Your Email"
-          />
-          <br />
-          <br />
-          <label for="problem"> What's the problem? </label> <br />
-          <textarea type="text" id="problem"></textarea>
-          <br />
-          <br />
+        <form className="contact-us-form">
+          <label>
+            {" "}
+            What's your email address?
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Enter Your Email"
+            />
+          </label>
+          <label>
+            {" "}
+            What's the problem?
+            <textarea type="text" id="problem"></textarea>
+          </label>
           <input type="submit" value="Submit" />
         </form>
       </div>
