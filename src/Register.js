@@ -3,12 +3,7 @@ import React, { Component } from "react";
 export default class RegisterForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: "",
-      password: "",
-    };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleInputChange = this.handleInputChange.bind(this);
   }
   handleSubmit(event) {
     event.preventDefault();
