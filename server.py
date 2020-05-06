@@ -32,17 +32,19 @@ class User(db.Model):
 def login():
     email = request.form["email"]
     password = request.form["password"]
-    
-    # Check credentials
-    query = db.session.query(User).filter_by(email=email, password=password)
-    credentials_valid = db.session.query(query.exists()).scalar()
-    if credentials_valid:
-        session['email'] = email
-        print("Login success")
-        return jsonify({"loginSuccess": True})
+    if email and password:
+        # Check credentials
+        query = db.session.query(User).filter_by(email=email, password=password)
+        credentials_valid = db.session.query(query.exists()).scalar()
+        if credentials_valid:
+            session['email'] = email
+            print("Login success")
+            return jsonify({"loginSuccess": True})
+        else:
+            print("Login failed")
+            return jsonify({"loginSuccess": False, "reason": "User does not exist or password is incorrect"})
     else:
-        print("Login failed")
-        return jsonify({"loginSuccess": False})
+        return jsonify({"loginSuccess": False, "reason": "Invalid form input"})
 
 @app.route('/api/register', methods=["POST"])
 def register():
@@ -58,7 +60,7 @@ def register():
         user_exists = db.session.query(query.exists()).scalar()
         if user_exists:
             print("/api/register - user already exists")
-            return jsonify({"registerSuccess": False, "cause": "User already exists"})
+            return jsonify({"registerSuccess": False, "reason": "User already exists"})
         else:
             new_user = User(email=email, password=password, name=name, address=address)
             db.session.add(new_user)
@@ -66,7 +68,7 @@ def register():
             session['email'] = email
             return jsonify({"registerSuccess": True})
     else:
-        return jsonify({"registerSuccess": False, "cause": "Invalid form input"})
+        return jsonify({"registerSuccess": False, "reason": "Invalid form input"})
 
         
 if __name__ == "__main__":
