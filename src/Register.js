@@ -4,7 +4,6 @@ export default class RegisterForm extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleInputChange = this.handleInputChange.bind(this);
   }
   handleSubmit(event) {
     event.preventDefault();
