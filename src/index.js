@@ -9,20 +9,22 @@ import RegisterForm from "./Register";
 
 import CodingImage from "./img/coding-image-new.png";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-const AppContext = React.createContext({
-  loggedIn: false,
-  email: "",
-  name: ""
-})
-
+import AppContext from "./appContext"
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.updateLoginState = (newState) => {
+      this.setState(() => newState)
+    }
+
+    this.state = {
+      loggedIn: false,
+      updateLoginState: this.updateLoginState
+    }
+  }
   render() {
     return (
-      <AppContext.Provider  value={{
-        loggedIn: false,
-        email: "",
-        name: ""
-      }}>
+      <AppContext.Provider  value={this.state}>
         <Header />
         <img
           className="coding-image"

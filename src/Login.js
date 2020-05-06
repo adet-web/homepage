@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AppContext from "./appContext";
 
 export default class LoginForm extends Component {
   constructor(props) {
@@ -24,7 +25,11 @@ export default class LoginForm extends Component {
       console.log(data)
       if (data.loginSuccess) {
         // logged in
-        alert("Login successful")
+        // alert("Login successful")
+        // this
+        this.context.updateLoginState({
+          loggedIn: true,
+        })
       }
       else {
         // failure
@@ -65,3 +70,5 @@ export default class LoginForm extends Component {
     );
   }
 }
+
+LoginForm.contextType = AppContext;
