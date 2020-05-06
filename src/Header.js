@@ -1,18 +1,10 @@
 import React, { Component, Fragment } from "react";
 import logo from "./img/adet_logo.png";
 import { Link, useHistory } from "react-router-dom";
+import SignOutBtn from "./SignOutBtn";
 import AppContext from "./appContext";
+
 export default class Header extends Component {
-//   constructor(props) {
-//     super(this.props);
-//   }
-//   signOut() {
-//     this.context.updateLoginState({
-//       loggedIn: false,
-//     });
-//     useHistory().push("/");
-//     console.log("Signing out...");
-//   }
   render() {
     return (
       <header className="header">
@@ -34,7 +26,7 @@ export default class Header extends Component {
                 {this.context.loggedIn ? (
                   <Fragment>
                     <Link to="/account">Account</Link>
-                    <button>Sign out</button>
+                    <SignOutBtn></SignOutBtn>
                   </Fragment>
                 ) : (
                   <Fragment>
@@ -54,6 +46,5 @@ export default class Header extends Component {
   }
 }
 
-const signOut = () => {};
 
 Header.contextType = AppContext;
