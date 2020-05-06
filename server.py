@@ -37,10 +37,14 @@ def login():
         # Check credentials
         query = db.session.query(User).filter_by(email=email, password=password)
         credentials_valid = db.session.query(query.exists()).scalar()
+
         if credentials_valid:
             session['email'] = email
+            role_id = User.query.filter_by(email=email, password=password).first().role_id
+
+        
             print("Login success")
-            return jsonify({"loginSuccess": True})
+            return jsonify({"loginSuccess": True, "userType": role_id})
         else:
             print("Login failed")
             return jsonify({"loginSuccess": False, "reason": "User does not exist or password is incorrect"})
