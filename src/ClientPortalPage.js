@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 
-const ClientPortalPage = () => {
+const ClientPortalPage = (props) => {
+  console.log(props.values)
     return (
     <Fragment>
         <div className="portfolio">
@@ -44,10 +45,8 @@ const ClientPortalPage = () => {
         </div>
         <div className="hedgefund-manager">
           <h1>Your Hedgefund Manager</h1>
-          <div>First Name:</div>
-          <div>Last Name:</div>
-          <div>Email Address:</div>
-          <div>Phone Number:</div>
+    <div>Name: {props.values.managerName}</div>
+          <div>Email: {props.values.managerEmail}</div>
         </div>
         <div className="gain-insights">
           <h1>Gain Insights</h1>

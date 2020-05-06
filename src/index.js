@@ -25,6 +25,11 @@ export default class App extends Component {
     this.state = {
       loggedIn: false,
       userType: null,
+      name: "",
+      email: "",
+      address: "",
+      managerName: "",
+      managerEmail: "",
       updateLoginState: this.updateLoginState,
     };
   }
@@ -40,7 +45,7 @@ export default class App extends Component {
           height="250vw"
         />
         <Switch>
-        <Route exact path="/portal" render={() => <PortalPage userType={this.state.userType}/>}/>
+        <Route exact path="/portal" render={() => <PortalPage state={this.state}/>}/>
           {!(this.state.loggedIn) &&  
           <Route exact path="/login" component={LoginForm}/>
   }

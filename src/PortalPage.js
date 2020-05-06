@@ -9,10 +9,10 @@ export default class PortalPage extends Component {
   }
   render() {
     var view
-    if (this.props.userType === 1) {
-      view = <ClientPortalPage />;
+    if (this.props.state.userType === 1) {
+      view = <ClientPortalPage values={this.props.state} />;
     } else if (this.props.userType === 2) {
-      view = <AdminPortalPage />;
+      view = <AdminPortalPage values={this.props.state}/>;
     }
 
     return (
@@ -20,10 +20,9 @@ export default class PortalPage extends Component {
         <div className="wrapper">
           <div className="personal-info">
             <h1>Personal Information</h1>
-            <div>Email Address:</div>
-            <div>First Name:</div>
-            <div>Last Name:</div>
-            <div>Address:</div>
+    <div>Name: {this.props.state.name}</div>
+            <div>Email: {this.props.state.email}</div>
+            <div>Address: {this.props.state.address}</div>
           </div>
           {view}
         </div>
