@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import AppContext from "./appContext";
 
-const SignOutBtn = () => {
+export default () => {
   let history = useHistory();
   let context = React.useContext(AppContext);
 
@@ -20,4 +20,3 @@ const SignOutBtn = () => {
   );
 };
 
-export default SignOutBtn;
