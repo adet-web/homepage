@@ -22,7 +22,10 @@ export default class Header extends Component {
                 <Link to="/insights">Insights</Link>
                 <Link to="/relations">Investor Relations</Link>
                 {this.context.loggedIn ? (
-                <Link to="/account">Account</Link>
+                <Fragment>
+                    <Link to="/account">Account</Link>
+                    <button>Sign out</button>
+                </Fragment>
                 ) : (
                   <Fragment>
                     <Link to="/login" className="login">Login</Link>
