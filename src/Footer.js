@@ -5,18 +5,6 @@ export default class Footer extends Component {
       return (
         <footer className="footer">
             <div className="footer-unit">
-                <nav>
-                    <ul> 
-                        <li> 
-                            <a href="about.html"> About</a>
-                            <a href="contact.html"> Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                {/* <!--
-                Having a p tag like this is kinda bad practice and looks
-                ugly maybe make it an iframe and insert text with a js script 
-                --> */}
                 <p> © 2020 Analyze Data Execute Trades, LLC. All Rights reserved.</p>
                 <p> 
                     This website is not an offer to, or solicitation of, any potential clients or investors 
