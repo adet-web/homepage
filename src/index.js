@@ -69,29 +69,6 @@ export default class App extends Component {
     );
   }
 }
-function PrivateRoute({ children, ...rest }) {
-  return (
-    // <AppContext.Consumer>
-      // {(value) => (
-        <Route
-          {...rest}
-          render={({ location }) =>
-            true ? (
-              children
-            ) : (
-              <Redirect
-                to={{
-                  pathname: "/login",
-                  from:location
-                }}
-              />
-            )
-          }
-        />
-      // )}
-    // </AppContext.Consumer>
-  );
-}
 
 ReactDOM.render(
   <Router>
