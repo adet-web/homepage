@@ -6,14 +6,30 @@ import Footer from "./Footer";
 import Home from "./Home";
 import LoginForm from "./Login";
 import RegisterForm from "./Register";
-
+import AccountPage from "./AccountPage";
 import CodingImage from "./img/coding-image-new.png";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import AppContext from "./appContext";
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.updateLoginState = (newState) => {
+      this.setState(() => newState);
+    };
+
+    this.state = {
+      loggedIn: false,
+      updateLoginState: this.updateLoginState,
+    };
+  }
   render() {
     return (
-      <div>
+      <AppContext.Provider value={this.state}>
         <Header />
         <img
           className="coding-image"
@@ -23,15 +39,17 @@ export default class App extends Component {
           height="250vw"
         />
         <Switch>
-          <Route exact path="/login">
-            <LoginForm />
-          </Route>
+        <Route exact path="/account" component={AccountPage}/>
+          {!(this.state.loggedIn) &&  
+          <Route exact path="/login" component={LoginForm}/>
+  }
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/register">
+          <Route exact path="/register">
             <RegisterForm />
           </Route>
+
           {/* <Route path="/about">
             <About />
             </Route>
@@ -46,11 +64,35 @@ export default class App extends Component {
           </Route> */}
         </Switch>
 
-          <Footer />
-      </div>
+        <Footer />
+      </AppContext.Provider>
     );
   }
 }
+function PrivateRoute({ children, ...rest }) {
+  return (
+    // <AppContext.Consumer>
+      // {(value) => (
+        <Route
+          {...rest}
+          render={({ location }) =>
+            true ? (
+              children
+            ) : (
+              <Redirect
+                to={{
+                  pathname: "/login",
+                  from:location
+                }}
+              />
+            )
+          }
+        />
+      // )}
+    // </AppContext.Consumer>
+  );
+}
+
 ReactDOM.render(
   <Router>
     <App />

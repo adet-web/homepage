@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import AppContext from "./appContext";
+
 
 export default class LoginForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: "",
-      password: "",
-    };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.test = () => {
+    this.props.history.push("/account")
+    }
     // this.handleInputChange = this.handleInputChange.bind(this);
   }
   handleSubmit(event) {
@@ -24,7 +25,13 @@ export default class LoginForm extends Component {
       console.log(data)
       if (data.loginSuccess) {
         // logged in
-        alert("Login successful")
+        // alert("Login successful")
+        // this
+        this.context.updateLoginState({
+          loggedIn: true,
+        })
+        this.test()
+        this.props.history.push("/account")
       }
       else {
         // failure
@@ -46,6 +53,7 @@ export default class LoginForm extends Component {
               placeholder="Enter Email"
               name="email"
               required
+              maxLength="255"
             ></input>
           </label>
           <label>
@@ -54,6 +62,7 @@ export default class LoginForm extends Component {
               type="password"
               placeholder="Enter Password"
               name="password"
+              maxLength="255"
               required
             ></input>
           </label>
@@ -63,3 +72,6 @@ export default class LoginForm extends Component {
     );
   }
 }
+
+
+LoginForm.contextType = AppContext;

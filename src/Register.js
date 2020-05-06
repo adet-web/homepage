@@ -45,6 +45,7 @@ export default class RegisterForm extends Component {
               type="email"
               placeholder="Enter Email"
               name="email"
+              maxLength="255"
               required
             ></input>
           </label>
@@ -54,6 +55,7 @@ export default class RegisterForm extends Component {
               type="password"
               placeholder="Enter Password"
               name="password"
+              maxLength="255"
               required
             ></input>
           </label>
@@ -62,6 +64,7 @@ export default class RegisterForm extends Component {
             <input
               type="name"
               placeholder="Name"
+              maxLength="255"
               name="name"
               required
             ></input>
@@ -71,6 +74,7 @@ export default class RegisterForm extends Component {
             <input
               type="address"
               placeholder="Address"
+              maxLength="255"
               name="address"
               required
             ></input>
