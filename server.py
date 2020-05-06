@@ -17,12 +17,12 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(255), unique=True)
-    password = db.Column(db.String(255))
-    role_id = db.Column(db.Integer, default = 1)
-    name = db.Column(db.String(255))
-    address = db.Column(db.String(255))
-    manager_id = db.Column(db.String(255), default=None)
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    role_id = db.Column(db.Integer, default = 1, nullable=False)
+    name = db.Column(db.String(255),  nullable=False)
+    address = db.Column(db.String(255),  nullable=False)
+    manager_id = db.Column(db.String(255))
 
 # Roles, user = 1, manager = 2
 
