@@ -10,34 +10,24 @@ db = SQLAlchemy(app)
 Column = db.Column
 String = db.String
 Integer = db.Integer
-ForeignKey = db.ForeignKey
 
 # Define database models
 
 class Role(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), unique=True)
+    id = Column(Integer, primary_key=True)
+    name = Column(String(80), unique=False)
+    users = db.relationship("User", backref="role", lazy=True)
 
 class User(db.Model):
     id = Column(Integer, primary_key=True)
     email = Column(String(255), unique=True, nullable=False)
     password = Column(String(255), nullable=False)
-    role_id = Column(Integer, ForeignKey("Roles.id"), default = 1, nullable=False)
+    role_id = Column(Integer, db.ForeignKey("role.id"), default = 1, nullable = False)
     name = Column(String(255),  nullable=False)
     address = Column(String(255),  nullable=False)
     manager_id = Column(String(255))
 
-# Roles, user = 1, manager = 2
 
-def db_init():
-    db.create_all()
-    
-    # Create two manager accounts
-    new_user = User(email="test@test.com", password="password", name="Manager 1", address="some address")
-    db.session.add(new_user)
-    new_user = User(email="example@example.com", password="password", name="Manager 2", address="some address")
-    db.session.add(new_user)
-    db.session.commit()
 
 @app.route('/api/login', methods=["POST"])
 def login():
@@ -82,6 +72,17 @@ def register():
         return jsonify({"registerSuccess": False, "reason": "Invalid form input"})
 
         
+def db_init():
+    db.drop_all()
+    db.create_all()
+    # Create two roles and two manager accounts
+    db.session.add_all([
+        Role(name="user"),
+        Role(name="admin"),
+        User(email="test@test.com", password="password", name="Manager 1", address="some address"),
+        User(email="example@example.com", password="password", name="Manager 2", address="some address")
+    ])
+    db.session.commit()
 if __name__ == "__main__":
     db_init()
     app.run()
