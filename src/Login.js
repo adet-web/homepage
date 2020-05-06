@@ -19,15 +19,14 @@ export default class LoginForm extends Component {
     }).then((res) => 
        res.json()
     ).then(data => {
-      console.log(data)
       if (data.loginSuccess) {
-        // logged in
-        // alert("Login successful")
-        // this
+        console.log(data)
         this.context.updateLoginState({
           loggedIn: true,
+          userType: data.userType
         })
-        this.props.history.push("/account")
+        console.log(this.context)
+        this.props.history.push("/portal")
       }
       else {
         // failure
