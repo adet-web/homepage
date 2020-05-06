@@ -1,9 +1,7 @@
 from flask import Flask, session, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
 app.config['DEBUG'] = True
 app.config['SECRET_KEY'] = '17623c96-dc85-4a40-9d8b-11e8a8c1d7d0'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///adet.db'
