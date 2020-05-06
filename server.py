@@ -83,8 +83,8 @@ def db_init():
     db.session.add_all([
         Role(name="user"),
         Role(name="admin"),
-        User(email="test@test.com", password="password", name="Manager 1", address="some address"),
-        User(email="example@example.com", password="password", name="Manager 2", address="some address")
+        User(email="user@test", password="password", name="Manager 1", address="some address"),
+        User(email="man@test", password="password", name="Manager 2", address="some address", role_id=2)
     ])
     db.session.commit()
 if __name__ == "__main__":
