@@ -16,18 +16,18 @@ export default class ClientPortal extends Component {
                         <div> Portfolio Value: </div>
                         <div> Securities Owned: </div>
                         <form> 
-                            <label for="ticker">Buy:</label>
-                            <input type="text" id="ticker" name="ticker" placeholder="Enter Ticker Symbol"/>
-                            <label for="quantity">Quantity:</label>
-                            <input type="text" id="quantity" name="quantity" placeholder="Enter Whole Numbers"/>
-                            <input type="submit" value="Submit"/>
+                        <label for="ticker">Buy:</label><br/>
+                            <input type="text" id="ticker" name="ticker" placeholder="Enter Ticker Symbol"/><br/>
+                            <label for="quantity">Quantity:</label><br/>
+                            <input type="text" id="quantity" name="quantity" placeholder="Enter Whole Numbers"/><br/><br/>
+                            <input type="submit" value="Submit Buy Order"/>
                         </form>
                         <form> 
-                            <label for="ticker">Sell:</label>
-                            <input type="text" id="ticker" name="ticker" placeholder="Enter Ticker Symbol"/>
-                            <label for="quantity">Quantity:</label>
-                            <input type="text" id="quantity" name="quantity" placeholder="Enter Whole Numbers"/>
-                            <input type="submit" value="Submit"/>
+                            <label for="ticker">Sell:</label><br/>
+                            <input type="text" id="ticker" name="ticker" placeholder="Enter Ticker Symbol"/><br/>
+                            <label for="quantity">Quantity:</label><br/>
+                            <input type="text" id="quantity" name="quantity" placeholder="Enter Whole Numbers"/><br/><br/>
+                            <input type="submit" value="Submit Sell Order"/>
                         </form>                   
                     </div>
                     <div class="hedgefund-manager">
@@ -47,7 +47,6 @@ export default class ClientPortal extends Component {
                             <button> Visa Inc.</button>
                             <div> </div>
                             <button> Sprint Corporation</button>
-                        
                     </div>
                 </div>       
         );
