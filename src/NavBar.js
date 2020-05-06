@@ -14,7 +14,7 @@ const NavBar = () => {
           <Link to="/about">About</Link>
           {context.loggedIn ? (
             <Fragment>
-              <Link to="/account">Account</Link>
+              <Link to="/portal">Portal</Link>
               <SignOutBtn></SignOutBtn>
             </Fragment>
           ) : (

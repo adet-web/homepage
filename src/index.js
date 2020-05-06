@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import LoginForm from "./Login";
 import RegisterForm from "./Register";
-import AccountPage from "./AccountPage";
+import PortalPage from "./PortalPage";
 import CodingImage from "./img/coding-image-new.png";
 import {
   BrowserRouter as Router,
@@ -39,7 +39,7 @@ export default class App extends Component {
           height="250vw"
         />
         <Switch>
-        <Route exact path="/account" component={AccountPage}/>
+        <Route exact path="/account" component={PortalPage}/>
           {!(this.state.loggedIn) &&  
           <Route exact path="/login" component={LoginForm}/>
   }
