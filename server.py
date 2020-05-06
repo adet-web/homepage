@@ -29,6 +29,16 @@ class User(db.Model):
 
 # Roles, user = 1, manager = 2
 
+def db_init():
+    db.create_all()
+    
+    # Create two manager accounts
+    new_user = User(email="test@test.com", password="password", name="Manager 1", address="some address")
+    db.session.add(new_user)
+    new_user = User(email="example@example.com", password="password", name="Manager 2", address="some address")
+    db.session.add(new_user)
+    db.session.commit()
+
 @app.route('/api/login', methods=["POST"])
 def login():
     email = request.form["email"]
@@ -73,5 +83,5 @@ def register():
 
         
 if __name__ == "__main__":
-    db.create_all()
+    db_init()
     app.run()
