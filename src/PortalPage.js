@@ -11,10 +11,9 @@ export default class PortalPage extends Component {
     var view
     if (this.props.state.userType === 1) {
       view = <ClientPortalPage values={this.props.state} />;
-    } else if (this.props.userType === 2) {
+    } else if (this.props.state.userType === 2) {
       view = <AdminPortalPage values={this.props.state}/>;
     }
-
     return (
       <div className="main-page-container">
         <div className="wrapper">
