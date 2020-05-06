@@ -53,12 +53,6 @@ export default class App extends Component {
           {/* <Route path="/about">
             <About />
             </Route>
-            <Route path="/insights">
-            <Insights />
-            </Route>
-            <Route path="/relations">
-            <Relations />
-            </Route>
             <Route path="/contact">
             <Contact />
           </Route> */}

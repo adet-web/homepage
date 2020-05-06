@@ -9,8 +9,6 @@ export default class Footer extends Component {
                     <ul> 
                         <li> 
                             <a href="about.html"> About</a>
-                            <a href="#"> Insights</a>
-                            <a href="#"> Investor Relations</a>
                             <a href="contact.html"> Contact</a>
                         </li>
                     </ul>
