@@ -41,8 +41,6 @@ export default class App extends Component {
             <Route path="/relations">
             <Relations />
             </Route>
-            
-
             <Route path="/contact">
             <Contact />
           </Route> */}
