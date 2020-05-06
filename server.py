@@ -10,18 +10,19 @@ db = SQLAlchemy(app)
 Column = db.Column
 String = db.String
 Integer = db.Integer
+ForeignKey = db.ForeignKey
 
 # Define database models
 
-# class Role(db.Model):
-    # id = db.Column(db.Integer, primary_key=True)
-    # name = db.Column(db.String(80), unique=True)
+class Role(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=True)
 
 class User(db.Model):
     id = Column(Integer, primary_key=True)
     email = Column(String(255), unique=True, nullable=False)
     password = Column(String(255), nullable=False)
-    role_id = Column(Integer, default = 1, nullable=False)
+    role_id = Column(Integer, ForeignKey("Roles.id"), default = 1, nullable=False)
     name = Column(String(255),  nullable=False)
     address = Column(String(255),  nullable=False)
     manager_id = Column(String(255))
