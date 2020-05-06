@@ -27,7 +27,7 @@ export default class LoginForm extends Component {
         this.context.updateLoginState({
           loggedIn: true,
         })
-        this.props.history.push("/account")
+        this.props.history.push("/portal")
       }
       else {
         // failure
