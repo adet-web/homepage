@@ -6,9 +6,6 @@ export default class LoginForm extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.test = () => {
-    this.props.history.push("/account")
-    }
     // this.handleInputChange = this.handleInputChange.bind(this);
   }
   handleSubmit(event) {
@@ -30,7 +27,6 @@ export default class LoginForm extends Component {
         this.context.updateLoginState({
           loggedIn: true,
         })
-        this.test()
         this.props.history.push("/account")
       }
       else {
