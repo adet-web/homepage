@@ -12,8 +12,6 @@ const NavBar = () => {
         <li>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/insights">Insights</Link>
-          <Link to="/relations">Investor Relations</Link>
           {context.loggedIn ? (
             <Fragment>
               <Link to="/account">Account</Link>
