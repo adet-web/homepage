@@ -25,7 +25,7 @@ const ContactPage = () => {
           </tr>
           <tr>
             <td>CJ Syki</td>
-            <td> cgs737@nyu.edu</td>
+            <td>cgs737@nyu.edu</td>
           </tr>
           <tr>
             <td>Chris Gao</td>
