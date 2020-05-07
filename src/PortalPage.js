@@ -18,8 +18,14 @@ export default class PortalPage extends Component {
       <div className="main-page-container">
         <div className="wrapper">
           <div className="personal-info">
+            <table>
+          <tr>
+            <td>Name</td>
+        <td>{this.props.state.name}</td>
+          </tr>
+            </table>
             <h1>Personal Information</h1>
-    <div>Name: {this.props.state.name}</div>
+    <div>Name: </div>
             <div>Email: {this.props.state.email}</div>
             <div>Address: {this.props.state.address}</div>
           </div>

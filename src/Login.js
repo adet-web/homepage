@@ -35,6 +35,8 @@ export default class LoginForm extends Component {
   }
   render() {
     return (
+    <div className="main-page-container">
+
       <form className="login_form" onSubmit={this.handleSubmit}>
         <div className="login-container">
           <label>
@@ -60,6 +62,7 @@ export default class LoginForm extends Component {
           <button type="submit">Login</button>
         </div>
       </form>
+      </div>
     );
   }
 }
