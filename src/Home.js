@@ -10,9 +10,16 @@ export default class Home extends Component {
             <h1> Welcome to A.D.E.T! </h1>
             <p>
               {" "}
-              	We are project ADET, a team consisting of anti-social nerds who just happened to form a god tier alpha squad team in our senior/junior year at NYU Tandon University. Led by our alpha omega chad, Bryan, his lackeys and him have come together to create a website for the purpose of helping any casual person who does not know much about how to start investing to start with our website. Our site provides the simple stock price prediction algorithms that are simple to use and view to the everyday person. One simple click of our algorithm will provide the user with the power to see future stock forecasts generated from special algorithmic techniques that allow for such predictions to be made. Starting in 2020, we as a team have decided to put forward our dream of such a website that was simple to use, and available to everyday people. For more advanced stock traders, they may like to use our hedge fund manager system to assist other people or to look for other managers who could ease the transition between normal and algorithmic trading. We also provide our own ingenious recommendations on the stocks that we believe will do better in the future with our high IQ intellectual minds with the assistance of the same algorithms provided to you! The user! Customer satisfaction is our number 1 priority, next to satisfying our chad god, Strauss, in this god tier project, and if you have any questions, please feel free to contact us at 1-800-gofuckyourself.org
+				Here you will find one of the greatest financial investment applications
+				that you have ever come across in your life. This is one of our greatest project
+				ever put into creation. It will open the world of financial investment to anyone
+				that comes accross this site, were they to use the vast power that our algorithmic
+				techniques may provide. With the ease of use of our website, and the predictive power
+				of our algorithms, we have entrusted the user, you!, to begin investment will little 
+				worries of major loss of revenue. By securing your financial future, you will live a 
+				better and much happier life! Begin investing by signing up now!
 			  {" "}
-            </p>
+            </p>	
           </div>
           <div className="image-container">
             <img src={homeImage} width="100%"></img>
