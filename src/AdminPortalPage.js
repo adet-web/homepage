@@ -51,8 +51,8 @@ const AdminPortalPage = () => {
             <br />
           </div>
           <div>
-            <p href="">Tesla Inc.</p>
-            <a> Expected Closing Price Graph </a>
+            <p>Tesla Inc.</p>
+            <a href=""> Expected Closing Price Graph </a>
             <br />
             <a href=""> Notable Future Events </a>
             <br />
