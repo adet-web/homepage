@@ -90,6 +90,7 @@ const AdminPortalPage = () => {
           <label>
             {" "}
             What's your email address?
+            <span> </span>
             <input
               type="text"
               id="email"
@@ -97,11 +98,14 @@ const AdminPortalPage = () => {
               placeholder="Enter Your Email"
             />
           </label>
+          <span> </span>
           <label>
             {" "}
             What's the problem?
+            <span> </span>
             <textarea type="text" id="problem"></textarea>
           </label>
+          <span> </span>
           <input type="submit" value="Submit" />
         </form>
       </div>

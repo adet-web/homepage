@@ -41,6 +41,7 @@ export default class LoginForm extends Component {
 
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="login-container">
+          <h1> Login Form</h1>
           <label>
             <b>Email</b>
             <input
