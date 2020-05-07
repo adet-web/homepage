@@ -11,7 +11,7 @@ body{
 
 .main-page-container{
   min-height: 100%;
-  margin: 0px 200px 0px;
+  margin: 0px 10% 0px;
   display: grid;
   color: #cacaca;
 }
@@ -450,13 +450,15 @@ s
   line-height: 26px;
   color: #cacaca;
 }
+
 .section-flex-c > * {
-  max-width: 50%;
+  max-width: 35%;
   flex-grow: 1;
 }
 
 .section-flex-c img {
-  // max-width: 50%;
+  max-width: 40%;
+  min-width: 400px;
 }
 
 .altern-bg section:nth-child(odd) {
@@ -493,7 +495,7 @@ s
   margin-right: 10px;
 }
 .section-flex-c  p{
-  max-width: 300px;
+  // max-width: 300px;
 
 }
 .contact-table th{
