@@ -40,9 +40,10 @@ export default class ClientPortal extends Component {
                     <div class="gain-insights">
                         <h1> Gain Insights</h1>
                         <p> Click on the stock you are interested in and we'll give you a pdf with our analysis. </p>
-                            <button> JPMorgan Chase Co.</button> <br/>
+                            <br/>
+                            <button> JPMorgan Chase Co.</button> 
                             <div> </div>
-                            <button> Tesla Inc.</button> <br/>
+                            <button> Tesla Inc.</button>  
                             <div> </div>
                             <button> Visa Inc.</button> <br/> <br/>
                             <div> </div>
