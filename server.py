@@ -1,9 +1,10 @@
-from flask import Flask, session, jsonify, request
+from flask import Flask, session, jsonify, request, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config['SECRET_KEY'] = '17623c96-dc85-4a40-9d8b-11e8a8c1d7d0'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///adet.db'
+app.config['PDF_FOLDER'] = './pdfs'
 
 # Create db connection object
 db = SQLAlchemy(app)
@@ -29,6 +30,10 @@ class User(db.Model):
     name = Column(String(255),  nullable=False)
     address = Column(String(255),  nullable=False)
     manager_id = Column(String(255))
+
+@app.route('/api/pdf/<path:filename>', methods=["GET"]):
+def pdf_download(filename):
+    return send_from_directory(app.config["PDF_FOLDER"], filename, as_attachment=True)
 
 
 @app.route('/api/login', methods=["POST"])
