@@ -61,7 +61,7 @@ const ClientPortalPage = (props) => {
       <div className="gain-insights">
         <h1>Gain Insights</h1>
         <p>
-          Click on the stock you are interested in and we'll give you a pdf with
+        Click on the stock you are interested in and we'll give you a pdf with
           our analysis.
         </p>
         <a href="/api/pdf/adet_jp_morgan.pdf">
@@ -70,10 +70,10 @@ const ClientPortalPage = (props) => {
         <a href="/api/pdf/adet_tesla.pdf">
           <button>Tesla Inc.</button>
         </a>
-        <a>
+        <a href="/api/pdf/adet_visa.pdf">
           <button>Visa Inc.</button>
         </a>
-        <a>
+        <a href="/api/pdf/adet_sprint.pdf">
           <button>Sprint Corporation</button>
         </a>
       </div>

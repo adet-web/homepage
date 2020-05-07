@@ -43,38 +43,38 @@ const AdminPortalPage = () => {
         <div className="stocks">
           <div>
             <p>JPMorgan Chase & Co.</p>
-            <a> Expected Closing Price Graph </a>
+            <a href=""> Expected Closing Price Graph </a>
             <br />
-            <a> Notable Future Events </a>
+            <a href=""> Notable Future Events </a>
             <br />
-            <a> Full PDF </a>
+            <a href="/api/pdf/adet_jp_morgan.pdf"> Full PDF </a>
             <br />
           </div>
           <div>
-            <p>Tesla Inc.</p>
+            <p href="">Tesla Inc.</p>
             <a> Expected Closing Price Graph </a>
             <br />
-            <a> Notable Future Events </a>
+            <a href=""> Notable Future Events </a>
             <br />
-            <a> Full PDF </a>
+            <a href="/api/pdf/adet_tesla.pdf"> Full PDF </a>
             <br />
           </div>
           <div>
             <p>Visa Inc.</p>
-            <a> Expected Closing Price Graph </a>
+            <a href=""> Expected Closing Price Graph </a>
             <br />
-            <a> Notable Future Events </a>
+            <a href=""> Notable Future Events </a>
             <br />
-            <a> Full PDF </a>
+            <a href="/api/pdf/adet_visa.pdf"> Full PDF </a>
             <br />
           </div>
           <div>
             <p>Sprint Corporation</p>
-            <a> Expected Closing Price Graph </a>
+            <a href=""> Expected Closing Price Graph </a>
             <br />
-            <a> Notable Future Events </a>
+            <a href=""> Notable Future Events </a>
             <br />
-            <a> Full PDF </a>
+            <a href="/api/pdf/adet_sprint.pdf"> Full PDF </a>
             <br />
           </div>
         </div>
