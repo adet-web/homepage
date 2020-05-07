@@ -6,8 +6,8 @@ const ClientPortalPage = (props) => {
     <Fragment>
       <div className="portfolio">
         <h1>Portfolio</h1>
-        <div>Portfolio Value:</div>
-        <div>Securities Owned:</div>
+        <div>Portfolio Value: $20,000</div>
+        <div>Securities Owned: 2</div>
         <form>
           <label htmlFor="ticker">Buy:</label>
           <br />

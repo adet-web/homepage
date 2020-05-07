@@ -101,9 +101,9 @@ def db_init():
         Role(name="user"),
         Role(name="admin"),
         User(email="man@test", password="pw", name="Manager 2",
-             address="some address", role_id=2),
+             address="111 1st Avenue, New York, New York", role_id=2),
         User(email="user@test", password="pw", name="User 1",
-             address="some address", manager_id=1)
+             address="111 1st Avenue, New York, New York", manager_id=1)
     ])
     db.session.commit()
 
