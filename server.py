@@ -88,6 +88,7 @@ def register():
 
 
 def db_init():
+    # Drop all necessary as Flask dev server reload causes db_init() to fire multiple tines
     db.drop_all()
     db.create_all()
     # Create two roles and two manager accounts

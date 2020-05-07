@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import homeImage from "./img/ny.jpg"
 
 export default class Home extends Component {
   render() {
@@ -14,7 +15,7 @@ export default class Home extends Component {
             </p>
           </div>
           <div className="image-container">
-            <h1> Place images here </h1>
+            <img src={homeImage} width="100%"></img>
           </div>
         </div>
         <div className="row_2">
