@@ -480,7 +480,15 @@ s
   width: 500px;
   margin: 0 auto;
 }
-.inline_span{
+
+.section-flex-c span{
   text-decoration: underline;
-  text-align: center;
+  font-size: 30px;
+}
+.login-container label{
+  margin-right: 20px;
+}
+
+.login-container b{
+  margin-right: 10px;
 }
