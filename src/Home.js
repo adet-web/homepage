@@ -10,7 +10,7 @@ export default class Home extends Component {
         <article className="altern-bg">
           <section className="section-flex-c">
             <div>
-          <h1> Welcome to A.D.E.T! </h1>
+              <h1> Welcome to A.D.E.T! </h1>
               <p>
                 {" "}
                 Here you will find one of the greatest financial investment
@@ -71,7 +71,6 @@ export default class Home extends Component {
             <img src={img_handshake}></img>
           </section>
         </article>
-
       </div>
     );
   }

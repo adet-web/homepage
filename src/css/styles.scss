@@ -1,5 +1,5 @@
 body{
-  background: #252526;
+  background: #1b1c1e;
   height: 100%;
 }
 
@@ -10,7 +10,7 @@ body{
 
 .main-page-container{
   min-height: 100%;
-  margin: 40px 200px 40px;
+  margin: 0px 200px 40px;
   display: grid;
   color: #214fe0;
 }
@@ -67,7 +67,7 @@ body{
 header{
   position: sticky;
   top: 0;
-  background: #000000;
+  background: #181a1b;
   z-index: 3;
 }
 header::after{
@@ -84,6 +84,8 @@ header::after{
   width: 85%;
   height: 100px;
   margin: 0 auto;
+  font-family: 'Roboto Slab', "Times New Roman", serif;
+
 }
 .nav-unit ul{
   margin: 0;
@@ -425,7 +427,10 @@ s
 }
 
 .contact-table {
-  width: 250px;
+  width: 300px;
+}
+.contact-table td {
+  padding: 4px 0px;
 }
 
 .section-flex-c {
@@ -437,8 +442,10 @@ s
   margin: 0 auto;
   padding: 4em;
   font-family: 'Roboto Slab', "Times New Roman", serif;
+  line-height: 26px;
+  color: #cacaca;
 }
-.section-flex-c div {
+.section-flex-c > * {
   max-width: 60%;
   flex-grow: 1;
 }
@@ -453,8 +460,10 @@ s
 // }
 
 .altern-bg section:nth-child(odd) {
-  background-color: #222;
+  background-color: #181a1b;
+  // background-color: #222;
 }
 .altern-bg section:nth-child(even) {
-  background-color: #1e1e1e;
+  // background-color: #1e1e1e;
+  background-color: #1c1e1f;
 }
