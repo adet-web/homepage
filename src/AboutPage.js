@@ -6,6 +6,7 @@ const AboutPage = () => {
       <article  className="altern-bg">
         <section className="section-flex-c">
           <p>
+            <span> About Us </span> <br/>
             We are project ADET, a team consisting of college students in our
             senior/junior year at NYU Tandon University. Led by cofounder Bryan,
             his fellow cofounders, CJ, Matthew, and Chris, have have come

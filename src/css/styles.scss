@@ -1,7 +1,6 @@
 body{
-  background: #1b1c1e;
+  background: #252526;
   height: 100%;
-  margin: 0px;
 }
 
 .coding-image{
@@ -11,9 +10,9 @@ body{
 
 .main-page-container{
   min-height: 100%;
-  margin: 0px 200px 0px;
+  margin: 40px 200px 40px;
   display: grid;
-  color: #cacaca;
+  color: #214fe0;
 }
 
 .main-page-container h1{
@@ -68,7 +67,7 @@ body{
 header{
   position: sticky;
   top: 0;
-  background: #181a1b;
+  background: #000000;
   z-index: 3;
 }
 header::after{
@@ -85,8 +84,6 @@ header::after{
   width: 85%;
   height: 100px;
   margin: 0 auto;
-  font-family: 'Roboto Slab', "Times New Roman", serif;
-
 }
 .nav-unit ul{
   margin: 0;
@@ -185,16 +182,12 @@ footer{
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color:  #111;
-  font-family: 'Roboto Slab', "Times New Roman", serif;
-  color: #828282;;
-
-
+  background-color:  #000000;
 }
 
 .footer-unit{
   width: 75.5%;
-  height: 120px;
+  height: 200px;
   margin: 0 auto;
 }
 
@@ -214,9 +207,9 @@ footer{
 }
 .footer-unit p{
   margin-left: 35px;
-  padding: 6px 0px;
+  padding-top: 20px;
   font-size: 12px;
-
+  color: #ffffff;
 }
 
 .wrapper{
@@ -432,51 +425,34 @@ s
 }
 
 .contact-table {
-  width: 300px;
-}
-.contact-table td {
-  padding: 4px 0px;
+  width: 250px;
 }
 
-.section-flex-c {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 4em;
-  font-family: 'Roboto Slab', "Times New Roman", serif;
-  line-height: 26px;
-  color: #cacaca;
+.about-us-title{
+  text-decoration: underline;
 }
-.section-flex-c > * {
-  max-width: 60%;
-  flex-grow: 1;
+.contact-us-title{
+  text-decoration: underline;
 }
 
-.section-flex-c img {
-  max-width: 35%;
+.contact-table th{
+  text-decoration: underline;
+  text-align: inherit;
 }
 
-.altern-bg section:nth-child(odd) {
-  background-color: #181a1b;
-  // background-color: #222;
-}
-.altern-bg section:nth-child(even) {
-  // background-color: #1e1e1e;
-  background-color: #1c1e1f;
+.login-container input{
+  margin-right: 30px;
 }
 
-.form {
-  // padding:  40px 30px; 
-  // background:  #fefefe; 
-  // display:  flex; 
-  // flex-direction:  column;
-  // align-items:  flex-start; 
-  // padding-bottom:  20px; 
-  // width:  300px; 
-  padding: 50px;
-  width: 500px;
-  margin: 0 auto;
+.login-container h1{
+  text-decoration: underline;
+}
+
+.contact-us-form span{
+  margin-left: 190px;
+}
+
+.inline_span{
+  text-decoration: underline;
+  text-align: center;
 }
