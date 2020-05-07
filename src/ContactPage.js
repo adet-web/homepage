@@ -7,7 +7,7 @@ const ContactPage = () => {
         If you have any questions or issues with the website, feel free to
         contact any the admins through email
       </p>
-      <table>
+      <table className="contact-table">
         <thead>
           <tr>
             <th>Name</th>
