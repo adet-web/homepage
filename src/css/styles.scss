@@ -10,9 +10,9 @@ body{
 
 .main-page-container{
   min-height: 100%;
-  margin: 0px 200px 40px;
+  margin: 0px 200px 0px;
   display: grid;
-  color: #214fe0;
+  color: #cacaca;
 }
 
 .main-page-container h1{
@@ -453,11 +453,6 @@ s
 .section-flex-c img {
   max-width: 35%;
 }
-// .section-flex-c h1 {
-//   text-align: left;
-//   margin-left: 4em;
-//   width: 100%;
-// }
 
 .altern-bg section:nth-child(odd) {
   background-color: #181a1b;
@@ -466,4 +461,17 @@ s
 .altern-bg section:nth-child(even) {
   // background-color: #1e1e1e;
   background-color: #1c1e1f;
+}
+
+.form {
+  // padding:  40px 30px; 
+  // background:  #fefefe; 
+  // display:  flex; 
+  // flex-direction:  column;
+  // align-items:  flex-start; 
+  // padding-bottom:  20px; 
+  // width:  300px; 
+  padding: 50px;
+  width: 500px;
+  margin: 0 auto;
 }

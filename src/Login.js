@@ -36,8 +36,10 @@ export default class LoginForm extends Component {
   render() {
     return (
     <div className="main-page-container">
+      <article className="altern-bg">
+      <section>
 
-      <form className="login_form" onSubmit={this.handleSubmit}>
+      <form className="form" onSubmit={this.handleSubmit}>
         <div className="login-container">
           <label>
             <b>Email</b>
@@ -47,7 +49,7 @@ export default class LoginForm extends Component {
               name="email"
               required
               maxLength="255"
-            ></input>
+              ></input>
           </label>
           <label>
             <b>Password</b>
@@ -57,11 +59,13 @@ export default class LoginForm extends Component {
               name="password"
               maxLength="255"
               required
-            ></input>
+              ></input>
           </label>
           <button type="submit">Login</button>
         </div>
       </form>
+              </section>
+      </article>
       </div>
     );
   }
