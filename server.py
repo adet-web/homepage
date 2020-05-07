@@ -31,7 +31,7 @@ class User(db.Model):
     address = Column(String(255),  nullable=False)
     manager_id = Column(String(255))
 
-@app.route('/api/pdf/<path:filename>', methods=["GET"]):
+@app.route('/api/pdf/<path:filename>', methods=["GET"])
 def pdf_download(filename):
     return send_from_directory(app.config["PDF_FOLDER"], filename, as_attachment=True)
 
