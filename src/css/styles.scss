@@ -451,12 +451,12 @@ s
   color: #cacaca;
 }
 .section-flex-c > * {
-  max-width: 60%;
+  max-width: 50%;
   flex-grow: 1;
 }
 
 .section-flex-c img {
-  max-width: 35%;
+  // max-width: 50%;
 }
 
 .altern-bg section:nth-child(odd) {
@@ -494,6 +494,7 @@ s
 }
 .section-flex-c  p{
   max-width: 300px;
+
 }
 .contact-table th{
   text-align: left;
