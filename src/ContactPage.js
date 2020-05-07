@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 const ContactPage = () => {
   return (
     <div className="main-page-container">
+      <h1 className="contact-us-title"> How to Contact Us</h1>
       <p className="textcolor">
         If you have any questions or issues with the website, feel free to
         contact any the admins through email

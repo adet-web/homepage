@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 const AboutPage = () => {
   return (
     <div className="main-page-container">
+      <h1 className="about-us-title"> About Us</h1>
       <p className="textcolor">
         We are project ADET, a team consisting of college students in our
         senior/junior year at NYU Tandon University. Led by cofounder Bryan, his
