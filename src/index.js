@@ -15,6 +15,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import AppContext from "./appContext";
+import ContactPage from "./ContactPage";
+import AboutPage from "./AboutPage";
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -45,23 +47,22 @@ export default class App extends Component {
           height="250vw"
         />
         <Switch>
-        <Route exact path="/portal" render={() => <PortalPage state={this.state}/>}/>
-          {!(this.state.loggedIn) &&  
-          <Route exact path="/login" component={LoginForm}/>
-  }
+          <Route
+            exact
+            path="/portal"
+            render={() => <PortalPage state={this.state} />}
+          />
+          {!this.state.loggedIn && (
+            <Route exact path="/login" component={LoginForm} />
+          )}
           <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/register">
             <RegisterForm />
           </Route>
-
-          {/* <Route path="/about">
-            <About />
-            </Route>
-            <Route path="/contact">
-            <Contact />
-          </Route> */}
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/about" component={AboutPage} />
         </Switch>
 
         <Footer />
