@@ -21,7 +21,7 @@ const AboutPage = () => {
         algorithmic trading. We also provide our own ingenious recommendations
         on the stocks that we believe will do better in the future with our wise
         judgement and experience with the assistance of the same algorithms
-        provided to you! The user! Customer satisfaction is our number 1
+        provided to you! Customer satisfaction is our number 1
         priority, and if you have any questions, please feel free to contact us
         using our contact information on the contact page
       </p>
